@@ -14,15 +14,20 @@ void setup() {
 void loop() {
   int joyX = analogRead(A1);
   int joyY = analogRead(A2);
-  Serial.print("X: ");
+  Serial.print("joyX: ");
   Serial.print(joyX);
   Serial.print("\n");
-  Serial.print("Y: ");
+  Serial.print("joyY: ");
   Serial.print(joyY);
   int mapY = map(joyY, 0, 1023, 0, 180);
   int mapX = map(joyX, 0, 1023, 0, 180);
 //  int mapY = joyY << 3;
 //  int mapX = joyX << 3;
+//  Serial.print("mapX: ");
+//  Serial.print(mapX);
+//  Serial.print("\n");
+//  Serial.print("mapY: ");
+//  Serial.print(mapY);
   leftAdd = mapX - 90;
   rightAdd = mapX - 90;
 
