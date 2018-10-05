@@ -13,8 +13,6 @@ void loop() {
   int joyY = analogRead(A2); // Reads the input from the joystick
   int mapY = map(joyY, 0, 1023, 0, 180); // Converts the inputs from the joystick inputs to be written to the servos
   int mapX = map(joyX, 0, 1023, 0, 180); // Converts the inputs from the joystick inputs to be written to the servos
-//  int mapY = joyY << 3; // This is bit shifting from McKenzie, Should try it out to be more efficient
-//  int mapX = joyX << 3;
   leftAdd = mapX - 90; // This will take the mapped value minus the center point of the 360 servos
   rightAdd = mapX - 90; // This will take the mapped value minus the center point of the 360 servos
 
